@@ -196,7 +196,7 @@ h1 {
         border-radius: 50%;
         width: 375px; 
         height: 375px; 
-        background: url(../imagenes/juegoInicios.png) no-repeat center; 
+        background: url(../imagenes/juegoInicios.png) no-repeat center;  
         background-size: contain;
         display: flex;
         flex-direction: column;
