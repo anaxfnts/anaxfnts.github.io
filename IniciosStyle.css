@@ -1,115 +1,390 @@
-body{
-    background-color: #FDB7CC;
+@media all {
+
+  footer, aside, article, section {
+    display: block;
+  }
+
+h1 {
+  margin-left: 10%;
+
 }
 
-/*cabecera*/
-.imgcabecera{
-    width: 100%;
-}
+     body {
+       margin: 0; 
+       padding: 0;
+    }
 
-/*menu*/
-.menu{
-    background-color: #E992AC;
-}
+    .top-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      color: #FFF;
+      height: 50px;
+      padding: 1em;
+    }
+    
+    .menu {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .menu > li {
+      margin: 0 1rem;
+      overflow: hidden;
+    }
+    
+    .menu-button-container {
+      display: none;
+      height: 100%;
+      width: 30px;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10%;
+    }
+    
+    #menu-toggle {
+      display: none;
+    }
+    
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      height: 4px;
+      width: 30px;
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      border-radius: 2px;
+    }
+    
+    .menu-button::before {
+      content: '';
+      margin-top: -8px;
+    }
+    
+    .menu-button::after {
+      content: '';
+      margin-top: 8px;
+    }
+    
+    #menu-toggle:checked + .menu-button-container .menu-button::before {
+      margin-top: 0px;
+      transform: rotate(405deg);
+    }
+    
+    #menu-toggle:checked + .menu-button-container .menu-button {
+      background: rgba(255, 255, 255, 0);
+    }
+    
+    #menu-toggle:checked + .menu-button-container .menu-button::after {
+      margin-top: 0px;
+      transform: rotate(-405deg);
+    }
 
-.menu ul{
+}
+  
+@media screen {
+
+  body {
+    font: 400 100%/1.4 "Consolas", bold;
+  }
+
+  h2 {
+    font: 400 180%/1.4 "Consolas", bold;
+  }
+
+  h3 {
+    font: 700 140%/1.4 "Consolas", bold;
+  }
+
+  footer {
+    font-size: 90%; 
+    text-align: center;
+    background: #E992AC;
+    color: #000;
+    padding: 15px 0;
+  }
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  
+  }
+  .halfColumn {
+    width: 50%; 
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding: 0 15px 0 0;
+  
+  }
+
+
+
+      /* cabecera */
+  .top-nav {
+    padding: 30px 0;
+    background: #000; 
+    color: #E992AC;
+    border-bottom: 1px solid #E992AC;
+  }
+
+ .top-nav div ul {
     list-style: none;
-    width: 100%;
     margin: 0;
     padding: 0;
-}
-
-.menu ul li{
-    font-family:"Consolas", bold;
-    display: inline-block;
-}
-
-.menu ul li a{
-    display: block;
-    color: black;
-    padding: 10px 35px;
+  }
+  .top-nav div li {
+    float: right;
+    margin-left: 10px;
+  }
+  .top-nav ul a, #pageContent .actionBtn {
+    margin-top: 7px;
+    color: #E992AC;
+    font-weight: 500;
     text-decoration: none;
-    
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 12px;
+  }
+
+  #pageContent .actionBtn {
+    background: #000;
+    color: #E992AC;
+    padding: 12px 20px;
+    font-size: 120%;
+  }
+
+  .top-nav ul a:hover,.top-nav ul a:focus, #pageContent .actionBtn:hover, #pageContent .actionBtn:focus {
+    background: #fff;
+    color: #000;
+  
+  }
+
+  #pageContent {
+    padding: 30px 0;
+    background: #E992AC;
+    color: #000;
+    overflow: auto;
+  
+  }
+  
+    #homeFeature1 {
+      border: 7px solid #000;
+      border-radius: 50%;
+      width: 375px; 
+      height: 375px; 
+      background: url(../imagenes/3enraya.png) no-repeat center; 
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; 
+      margin: 50px auto 50px;
+      margin-left: -25%;
+    }
+
+
+    #homeFeature2 {
+        border: 7px solid #000;
+        border-radius: 50%;
+        width: 375px; 
+        height: 375px; 
+        background: url(../imagenes/juegoInicios.png) no-repeat center; 
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; 
+        margin: 50px auto 50px;
+        margin-left: -25%;
+      }
+  
+  
+  
+    /* Fechas  */
+    #galleryHdr {
+      text-align: center;
+      color: #E992AC;
+    }
+    #indice {
+      background: #000;
+      overflow: auto;
+      padding: 30px 0 50px;
+    }
+  
+    .fecha {
+      position: relative;
+      top: 0;
+      left: 0; 
+      float: left;
+      border: 5px solid #fff;
+      box-sizing: border-box;
+      width: 277px;
+      background-size: cover;
+      min-height: 200px;
+      margin: 0 15px 15px 0;
+    }
+  
+    .fecha span {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 5px 0;
+      background: #E992AC;
+      color: #000;
+      text-align: center;
+    }
+    #clase1970{
+      background: url(../imagenes/1970.jpeg) center no-repeat;
+      background-size: contain;
+    }
+    #clase1980 {
+      background: url(../imagenes/1980.jpeg) center no-repeat;
+      background-size: contain;
+    }
+    #clase1990 {
+      background: url(../imagenes/1990.jpeg) center no-repeat;
+      background-size: contain;
+    }
+    #mas2000 {
+      background: url(../imagenes/apartirdelos2000.jpeg) center no-repeat;
+      background-size: contain;
+    }
+  
+  }
+  
+  
+  @media screen and (max-width: 1190px) {
+  
+    .container {
+      width: auto; 
+      padding: 0 20px;
+    }
+  
+    .fecha {
+      width: 31%; 
+      margin: 0 3% 3% 0;
+    }
+    #indice > div > a:nth-child(4), #indice > div > a:nth-child(7) {
+      margin-right: 0;
+    }
+  
+  }
+  
+  
+  @media screen and (max-width: 800px) {
+  
+    .fecha {
+      width: 45%; margin: 2%;
+    }
+    #indice > div > a:nth-child(4), #indice > div > a:nth-child(7) {
+      margin-right: 2%;
+    }
+    .halfColumn, #homeFeature1, #homeFeature2 {
+      float: none; width: 100%;
+    }
+    #homeFeature1 {
+      width: 300px; 
+      height: 300px; 
+      margin: 50px auto 20px;
+    }
+
+    #homeFeature2 {
+        width: 300px; 
+        height: 300px; 
+        margin: 50px auto 20px;
+      }
+      .menu-button-container {
+        display: flex;
+      }
+      .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      #menu-toggle:checked ~ .menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding-bottom: 1em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        color: white;
+        background-color: #000;
+      }
+      .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }
+    }
+  
+  
+  @media screen and (max-width: 500px) {
+
+    .fecha {
+      float: none; 
+      width: 100%; 
+      margin: 20px 0; 
+      display: block;
+    }
+    #indice > div > a:nth-child(4), #indice > div > a:nth-child(7) {
+      margin-right: 0;
+    }
+  
+  }
+  
+  
+  
+  
+@media print {
+
+  body {
+    font: 400 14pt/1.4 "Consolas", bold; color: #000;
+  }
+  h1 {
+    font: 400 20pt/1.4 "Consolas", bold;
+
+  }
+  h2 {
+    font: 400 20pt/1.4 "Consolas", bold;
+  }
+  h3 {
+    font: 400 17pt/1.4 "Consolas", bold;
+  }
+
+  footer {
+    font-size: 11pt; margin-top: 30pt;
+  }
+  #pageContent {
+    margin: 30pt 0;
+  }
+  .fecha {
+    display: block; margin: 10pt 0;
+  }
+  a {
+    color: #000;
+  }
+
 }
-
-
-.menu ul li a:hover{
-    background-color:#8F8F8F;
-}
-
-/*contenido*/
-
-* {
-    box-sizing: border-box;
-}
-
-.contenido{
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.tittle{
-    font-family:"Consolas", bold;
-    float: left;
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 2%;
-    margin-top: 3%;
-    text-align: center;
-}
-
-.imagenI{
-    float: left;
-    width: 15%;
-    margin-left: 18%;
-    margin-top: 7%;
-}
-
-.imagenI img{
-    border-radius: 5%;
-}
-
-.textoD {
-    font-family:"Consolas", bold;
-    float: right;
-    width: 45%;
-    padding: 30px;
-    margin-right: 18%;
-    background-color:#E992AC;
-    line-height: 30px;
-
-}
-
-.imagenD{
-    float: right;
-    width: 15%;
-    margin-right: 18%;
-    margin-top: 7%;
-}
-
-.imagenD img{
-    border-radius: 5%;
-}
-
-.textoI {
-    font-family:"Consolas", bold;
-    float: left;
-    width: 45%;
-    padding: 30px;
-    margin-left: 18%;
-    background-color:#E992AC;
-    line-height: 30px;
-
-}
-
-.textoVacio {
-    font-family:"Consolas", bold;
-    float: right;
-    width: 45%;
-    padding: 5px;
-    margin-right: 16%;
-    background-color:#E992AC;
-
-}
-
