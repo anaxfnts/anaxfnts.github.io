@@ -1,65 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-    <title> HV | 1980-1989</title>
-    <meta charset= "UTF-8">
-    <link rel="stylesheet" href="1980Style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>HV | 1980</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/1980Style.css" />
 </head>
 <body>
 
-    <header>
-        <img class="imgcabecera" src="imagenes/1980.jpeg" height="100%">
-    </header>
-
-      <div class = "menu">
-        <ul>
-            <li> <a href="item1.html"> <h3> INICIOS </h3> </a></li>
-            <li> <a href="item2.html"> <h3>1970-1979</h3> </a></li>
-            <li> <a href="item3.html"> <h3>1980-1989</h3> </a></li>
-            <li> <a href="item4.html"> <h3>1990-1999 </h3> </a></li>
-            <li> <a href="item5.html"> <h3>+2000</h3> </a></li>
-            <li> <a href="item6.html"> <h3>Acerca de</h3> </a></li>
-            <li> <a href="menu.html"> <h3>Menú</h3> </a></li>
-        </ul>
+  
+  <section class="top-nav">
+    <div>
+      <h1>HISTORIA | VIDEOJUEGOS</h1>
     </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+        <li><a href="index.html">MENÚ</a></li>
+        <li><a href="item6.html">ACERCA DE</a></li>
+        <li><a href="item1.html">INICIOS</a></li>
+    </ul>
+  </section>
+  <main>
 
-    <div class = "contenido">
-
-        <div class = "tittle">
-            <h1> <u>La década de los 8 bits </u> </h1>
-        </div>
+    <section id="pageContent" aria-labelledby="contentHdr">
+      <center>
+      <div class="container">
         
-        <div class = "imagenI">
-            <img src="imagenes/arcade.jpg" width="116%">
-        </div>
-    
-        <div class = "textoD">
-            <h3> Los años 80 comenzaron con un fuerte crecimiento en el sector del videojuego alentado por la popularidad de los salones de máquinas recreativas y de las primeras videoconsolas aparecidas durante la década de los 70.</h3>
-        </div>
-    
-        <div class = "tittle">
-            <h1>   </h1>
-        </div>
-        
-    
-        <div class = "textoI">
-            <h3>El negocio asociado a esta nueva industria alcanzó grandes cosas en estos primeros años de los 80, pero sin embargo, en 1983 comenzó la llamada crisis del videojuego, afectando principalmente a Estados Unidos y Canadá, y que no llegaría a su fin hasta 1985.</h3>
 
-<h3>Japón apostó por el mundo de las consolas con el éxito de la Famicom (llamada en occidente como Nintendo Entertainment System), lanzada por Nintendo en 1983 mientras en Europa se decantaba por los microordenadores como el Commodore 64 o el Spectrum. </h3>
+        <div class="halfColumn">
+
+          <h2 id="contentHdr"><strong><u>LA DÉCADA DE LOS 8 BITS (1980-1989)</u></strong></h2>
+
+          <div id="myID">
+
+          <p>Los años 80 comenzaron con un fuerte crecimiento en el sector del videojuego alentado por la popularidad de los salones de máquinas recreativas 
+              y de las primeras videoconsolas aparecidas durante la década de los 70.</p>
+              <center>
+              <div class="halfColumn">
+
+                <div id="homeFeature1"></div>
+      
+              </div>
+            </center>
+
+          <p>El negocio asociado a esta nueva industria alcanzó grandes cosas en estos primeros años de los 80, pero sin embargo, en 1983 comenzó la llamada crisis del videojuego, afectando principalmente a Estados Unidos y Canadá, y que
+               no llegaría a su fin hasta 1985.
+            Japón apostó por el mundo de las consolas con el éxito de la Famicom 
+            (llamada en occidente como Nintendo Entertainment System), lanzada por Nintendo en 1983 mientras en Europa se decantaba por los
+             microordenadores como el Commodore 64 o el <strong>Spectrum.</strong></p>
+            <center>
+            <div class="halfColumn">
+
+                <div id="homeFeature2"></div>
+      
+              </div>
+              </center>
+
+            </div>
+
+            <button onClick="Mycolor()" class="actionBtn">PÚLSAME Y CAMBIA EL COLOR :)</button>
+
+        <script type='text/javascript'>
+          function Mycolor() {
+          var element = document.getElementById("myID");
+          element.style.backgroundColor="#" + Math.random().toString(16).slice(-3);
+          }
+          </script>
+
+
+          <p><a href="item4.html" class="actionBtn">SIGUIENTE PÁGINA</a></p>
+          <p><a href="item2.html" class="actionBtn">PÁGINA ANTERIOR</a></p>
 
         </div>
- <div class = "imagenD">
-            <img src="imagenes/nintendo80.jpg" width="119%">
-        </div>
+
+      </div>
+
+    </section>
+
+    <section id="indice" aria-labelledby="galleryHdr">
+
+      <div class="container">
+
+        <h2 id="galleryHdr"><strong><u>ÍNDICE FECHAS</u></strong></h2>
+
+        <a href="item2.html" class="fecha" id="clase1970">
+          <span>1970-1979</span>
+        </a>
+
+        <a href="item3.html" class="fecha" id="clase1980">
+          <span>1980-1989</span>
+        </a>
+
+        <a href="item4.html" class="fecha" id="clase1990">
+          <span>1990-1999</span>
+        </a>
+
+        <a href="item5.html" class="fecha" id="mas2000">
+          <span>A partir de los 2000</span>
+        </a>
 
 
-        
-    </div>
-    </div>
+      </div>
 
-    <br><br><br>
-</body>
-</html>
+    </center>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    :)
+
+  </footer>
 
 </body>
 </html>
